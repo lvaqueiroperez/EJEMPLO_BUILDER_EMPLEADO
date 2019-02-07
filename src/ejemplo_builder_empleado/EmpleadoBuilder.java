@@ -19,7 +19,7 @@ public class EmpleadoBuilder {
     private String formacion = "";
 
     //su constructor solo tendra los atributos que consideremos "obligatorios"
-    //los ponemos como final para evitar errores de modificacion
+    //los ponemos como final para evitar errores de modificacion SOLO EN EL CONSTRUCTOR
     public EmpleadoBuilder(final String nombre, final String apellido1, final String dni) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
