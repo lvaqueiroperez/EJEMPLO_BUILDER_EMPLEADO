@@ -18,7 +18,13 @@ public class EmpleadoBuilder {
     private String cargo = "";
     private String formacion = "";
 
-    
+    //su constructor solo tendra los atributos que consideremos "obligatorios"
+    //los ponemos como final para evitar errores de modificacion
+    public EmpleadoBuilder(final String nombre, final String apellido1, final String dni) {
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.dni = dni;
+    }
 
     //esta clase se encargara de poner valores por defecto a los atributos
     //tendra los mismos atributos, pero aqui se asignaran valores por defecto
