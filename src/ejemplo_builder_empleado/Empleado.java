@@ -18,6 +18,8 @@ public class Empleado {
     private String cargo;
     private String formacion;
 
+//poniendo el cursor aqui, podemos generar todos los set con ventana refactor-->
+    //replace constructor with builder CREARÁ LA CLASE BUIDER
     public Empleado(final String nombre, final String apellido1, final String apellido2, int dia, int mes, int anho, float altura, float pie, float diamCabeza, float sueldo, String dni, String cargo, String formacion) {
         this.nombre = nombre;
         this.apellido1 = apellido1;

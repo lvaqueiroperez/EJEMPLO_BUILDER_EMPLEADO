@@ -1,4 +1,5 @@
 package ejemplo_builder_empleado;
+//CLASE HECHA A MANO
 
 public class EmpleadoBuilder {
 
@@ -29,4 +30,57 @@ public class EmpleadoBuilder {
     //esta clase se encargara de poner valores por defecto a los atributos
     //tendra los mismos atributos, pero aqui se asignaran valores por defecto
     //a aquellos que no sean obligatorios
+    ////////
+    ////////
+    //creamos setters de atributos no-obligatorios y los modificamos asi:
+    public EmpleadoBuilder setApellido2(String nuevoApellido2) {
+        this.apellido2 = nuevoApellido2;
+        return this; //devuelve el objeto de la clase EpleadoBuilder con este atributo
+        //se supone que este apellido va a ser diferente al original
+
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public void setAnho(int anho) {
+        this.anho = anho;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public void setPie(float pie) {
+        this.pie = pie;
+    }
+
+    public void setDiamCabeza(float diamCabeza) {
+        this.diamCabeza = diamCabeza;
+    }
+
+    public void setSueldo(float sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public void setFormacion(String formacion) {
+        this.formacion = formacion;
+    }
+
+    ///////////////////////////////////////////////////////////
+    public Empleado crearEmpleado() {
+
+        return new EmpleadoBuilderAUTO().setNombre(nombre).setApellido1(apellido1).setApellido2(apellido2).setDia(dia).setMes(mes).setAnho(anho).setAltura(altura).setPie(pie).setDiamCabeza(diamCabeza).setSueldo(sueldo).setDni(dni).setCargo(cargo).setFormacion(formacion).createEmpleado();
+
+    }
+
 }
