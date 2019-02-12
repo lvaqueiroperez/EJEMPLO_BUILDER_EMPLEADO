@@ -1,9 +1,14 @@
 package ejemplo_builder_empleado;
 
+/**
+ * En esta clase pondremos TODOS los atributos que podrá tener el objeto
+ * complejo y definimos su constructor.
+ *
+ * @author luis-
+ */
 public class Empleado {
 
-    //si ponemos el nombre como final, podremos proteger el codigo para
-    //que una vez introducido el nombre no se pueda cambiar
+    //Pensar qué atributos serán OBLIGATORIOS a la hora de crear el objeto complejo
     private String nombre;
     private String apellido1;
     private String apellido2;
@@ -18,8 +23,8 @@ public class Empleado {
     private String cargo;
     private String formacion;
 
-//poniendo el cursor aqui, podemos generar todos los set con ventana refactor-->
-    //replace constructor with builder CREARÁ LA CLASE BUIDER
+    //En el constructor, ponemos TODOS los atributos como parámetros y
+    //ponemos como FINAL aquellos que sean OBLIGATORIOS (así se evitan errores)
     public Empleado(final String nombre, final String apellido1, final String apellido2, int dia, int mes, int anho, float altura, float pie, float diamCabeza, float sueldo, String dni, String cargo, String formacion) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -36,4 +41,6 @@ public class Empleado {
         this.formacion = formacion;
     }
 
+    //poniendo el cursor encima de el costructor
+    //PODEMOS CREAR LA CLASE BUILDER DIRECTAMENTE
 }

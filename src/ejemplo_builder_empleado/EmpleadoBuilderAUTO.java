@@ -5,6 +5,11 @@
  */
 package ejemplo_builder_empleado;
 
+/**
+ * CLASE BUILDER HECHA AUTOMÁTICAMENTE DESDE NETBEANS
+ *
+ * @author luis-
+ */
 public class EmpleadoBuilderAUTO {
 
     private String nombre;
@@ -17,23 +22,26 @@ public class EmpleadoBuilderAUTO {
     private float pie = 1;
     private float diamCabeza = 1;
     private float sueldo = 1;
-    private String dni = "15151515P";
+    private String dni;
     private String cargo = "nada";
     private String formacion = "nada";
 
-    public EmpleadoBuilderAUTO() {
-    }
-
-    public EmpleadoBuilderAUTO setNombre(String nombre) {
+    public EmpleadoBuilderAUTO(final String nombre, final String apellido1, final String dni) {
         this.nombre = nombre;
-        return this;
-    }
-
-    public EmpleadoBuilderAUTO setApellido1(String apellido1) {
         this.apellido1 = apellido1;
-        return this;
+        this.dni = dni;
+
     }
 
+//    public EmpleadoBuilderAUTO setNombre(String nombre) {
+//        this.nombre = nombre;
+//        return this;
+//    }
+//
+//    public EmpleadoBuilderAUTO setApellido1(String apellido1) {
+//        this.apellido1 = apellido1;
+//        return this;
+//    }
     public EmpleadoBuilderAUTO setApellido2(String apellido2) {
         this.apellido2 = apellido2;
         return this;
@@ -74,11 +82,10 @@ public class EmpleadoBuilderAUTO {
         return this;
     }
 
-    public EmpleadoBuilderAUTO setDni(String dni) {
-        this.dni = dni;
-        return this;
-    }
-
+//    public EmpleadoBuilderAUTO setDni(String dni) {
+//        this.dni = dni;
+//        return this;
+//    }
     public EmpleadoBuilderAUTO setCargo(String cargo) {
         this.cargo = cargo;
         return this;
