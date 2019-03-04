@@ -1,7 +1,7 @@
 package ejemplo_builder_empleado;
 
 /**
- * En esta clase pondremos TODOS los atributos que podrá tener el objeto
+ * En esta clase pondremos todos los atributos que podrá tener el objeto
  * complejo y definimos su constructor.
  *
  * @author luis-
@@ -23,8 +23,24 @@ public class Empleado {
     private String cargo;
     private String formacion;
 
-    //En el constructor, ponemos TODOS los atributos como parámetros y
-    //ponemos como FINAL aquellos que sean OBLIGATORIOS (así se evitan errores)
+    /**
+     * Constructor de la clase con todos sus atributos donde se distinguen
+     * aquellos "obligatorios" como "final" para evitar futuros errores
+     *
+     * @param nombre
+     * @param apellido1
+     * @param apellido2
+     * @param dia
+     * @param mes
+     * @param anho
+     * @param altura
+     * @param pie
+     * @param diamCabeza
+     * @param sueldo
+     * @param dni
+     * @param cargo
+     * @param formacion
+     */
     public Empleado(final String nombre, final String apellido1, final String apellido2, int dia, int mes, int anho, float altura, float pie, float diamCabeza, float sueldo, String dni, String cargo, String formacion) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -40,7 +56,7 @@ public class Empleado {
         this.cargo = cargo;
         this.formacion = formacion;
     }
-
+    //OJO !!!
     //poniendo el cursor encima de el costructor
     //PODEMOS CREAR LA CLASE BUILDER DIRECTAMENTE
 }

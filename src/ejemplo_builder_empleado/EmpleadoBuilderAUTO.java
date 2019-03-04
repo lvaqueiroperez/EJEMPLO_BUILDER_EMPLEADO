@@ -1,17 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejemplo_builder_empleado;
 
 /**
- * CLASE BUILDER HECHA AUTOMÁTICAMENTE DESDE NETBEANS
+ * CLASE BUILDER HECHA AUTOMÁTICAMENTE DESDE NETBEANS Fijarse que no lo hace
+ * todo bien, faltan por rellenar cosas en la clase
  *
  * @author luis-
  */
 public class EmpleadoBuilderAUTO {
-
+    //Inicializar los atributos OPCIONALES con un VALOR POR DEFECTO
     private String nombre;
     private String apellido1;
     private String apellido2 = "apellido";
@@ -26,6 +22,14 @@ public class EmpleadoBuilderAUTO {
     private String cargo = "nada";
     private String formacion = "nada";
 
+    /**
+     * Constructor de la clase Builder donde se ponen como parámentros
+     * únicamente los atributos obligatorios
+     *
+     * @param nombre
+     * @param apellido1
+     * @param dni
+     */
     public EmpleadoBuilderAUTO(final String nombre, final String apellido1, final String dni) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -33,6 +37,9 @@ public class EmpleadoBuilderAUTO {
 
     }
 
+    //SETTERS DE LOS ATRIBUTOS OPCIONALES !!!!
+    //MODIFICADOS CON UN "RETURN THIS" Y DEVOLVIENDO UNA VARIABLE DEL MISMO
+    //TIPO DE LA CLASE
 //    public EmpleadoBuilderAUTO setNombre(String nombre) {
 //        this.nombre = nombre;
 //        return this;
@@ -96,6 +103,10 @@ public class EmpleadoBuilderAUTO {
         return this;
     }
 
+    /**
+     * Método para crear el objeto deseado y retornarlo
+     * @return Empleado object
+     */
     public Empleado createEmpleado() {
         return new Empleado(nombre, apellido1, apellido2, dia, mes, anho, altura, pie, diamCabeza, sueldo, dni, cargo, formacion);
     }
