@@ -1,5 +1,8 @@
 package ejemplo_builder_empleado;
-
+/**
+ * Clase main donde se crearán los objetos Empleado a través del Builder
+ * @author luis-
+ */
 public class Ejemplo_Builder_Empleado {
 
     public static void main(String[] args) {
