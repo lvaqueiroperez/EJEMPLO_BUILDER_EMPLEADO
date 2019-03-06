@@ -1,8 +1,8 @@
 package ejemplo_builder_empleado;
 
 /**
- * En esta clase pondremos todos los atributos que podrá tener el objeto
- * complejo y definimos su constructor.
+ * En esta clase creamos todos los atributos que podrá tener el objeto complejo
+ * y definimos su constructor.
  *
  * @author luis-
  */

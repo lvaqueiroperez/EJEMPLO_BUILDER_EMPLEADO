@@ -1,7 +1,7 @@
 package ejemplo_builder_empleado;
 
 public class Ejemplo_Builder_Empleado {
-    
+
     public static void main(String[] args) {
 
         //EJEMPLO SIN USAR BUILDER: 
@@ -15,12 +15,14 @@ public class Ejemplo_Builder_Empleado {
         //este objeto se define, pero no se instancia (NO TIENE EL new !!!)
         //////////////////////////
         /////////////////////////
+        ////////////////////////
         //UTILIZANDO EL BUILDER:
-        //EN EL BUILDER INICIAL SOLO SE PONEN LOS PARÁMETROS CONSIDERADOS "OBLIGATORIOS" !!!
+        //EN EL CONSTRUCTOR INICIAL SOLO SE PONEN LOS PARÁMETROS CONSIDERADOS "OBLIGATORIOS" !!!
         Empleado jefeTaller = new EmpleadoBuilder("juan", "perez", "458154Y")
-                .setApellido2("rodriguez")
                 //aqui irían todos los set QUE QUERAMOS !!! puestos de manera legible
-                .crearEmpleado(); //cuando tengamos hecho el objeto complejo, LO CREAMOS
+                .setApellido2("rodriguez")
+                //cuando tengamos hecho el objeto complejo, LO CREAMOS
+                .crearEmpleado();
 
         //EJEMPLO CON BUILDER AUTOMÁTICO
         Empleado operarioTaller = new EmpleadoBuilderAUTO("pepe", "perez", "548545O")
@@ -31,5 +33,5 @@ public class Ejemplo_Builder_Empleado {
 
         //hacemos un DEBUG para comprobar que crea los objetos correctamente
     }
-    
+
 }

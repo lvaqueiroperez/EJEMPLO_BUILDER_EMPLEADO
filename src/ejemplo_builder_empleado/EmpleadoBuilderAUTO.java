@@ -1,12 +1,12 @@
 package ejemplo_builder_empleado;
 
 /**
- * CLASE BUILDER HECHA AUTOMÁTICAMENTE DESDE NETBEANS Fijarse que no lo hace
- * todo bien, faltan por rellenar cosas en la clase
+ * CLASE BUILDER HECHA AUTOMÁTICAMENTE DESDE NETBEANS Hace falta corregirlo
  *
  * @author luis-
  */
 public class EmpleadoBuilderAUTO {
+
     //Inicializar los atributos OPCIONALES con un VALOR POR DEFECTO
     private String nombre;
     private String apellido1;
@@ -23,7 +23,7 @@ public class EmpleadoBuilderAUTO {
     private String formacion = "nada";
 
     /**
-     * Constructor de la clase Builder donde se ponen como parámentros
+     * Constructor de la clase BuilderAUTO donde se ponen como parámentros
      * únicamente los atributos obligatorios
      *
      * @param nombre
@@ -104,8 +104,10 @@ public class EmpleadoBuilderAUTO {
     }
 
     /**
-     * Método para crear el objeto deseado y retornarlo
-     * @return Empleado object
+     * Método para crear el objeto deseado y retornarlo en una variable
+     * "EmpleadoBuilderAUTO"
+     *
+     * @return variable con el objeto complejo asignado
      */
     public Empleado createEmpleado() {
         return new Empleado(nombre, apellido1, apellido2, dia, mes, anho, altura, pie, diamCabeza, sueldo, dni, cargo, formacion);

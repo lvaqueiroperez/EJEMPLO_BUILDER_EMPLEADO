@@ -23,8 +23,14 @@ public class EmpleadoBuilder {
     private String cargo = "";
     private String formacion = "";
 
-    //El Builder tendrá un constructor SOLO CON LOS PARÁMETROS OBLIGATORIOS y 
-    //puestos como FINAL (para evitar errores)
+    /**
+     * El Builder tendrá un constructor SOLO CON LOS PARÁMETROS OBLIGATORIOS y
+     * puestos como FINAL
+     *
+     * @param nombre
+     * @param apellido1
+     * @param dni
+     */
     public EmpleadoBuilder(final String nombre, final String apellido1, final String dni) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -41,7 +47,7 @@ public class EmpleadoBuilder {
         //Se supone que este apellido va a ser diferente al original
     }
 
-    //(HACERLO CON TODOS)
+    //HACERLO CON TODOS (en este programa se utiliza el Builder automático)
     public void setDia(int dia) {
         this.dia = dia;
     }
@@ -80,6 +86,12 @@ public class EmpleadoBuilder {
 
     ///////////////////////////////////////////////////////////
     //Finalmente, creamos el método para CREAR NUESTRO OBJETO
+    /**
+     * Método para crear y devolver en una variable "Empleado" el objeto
+     * complejo
+     *
+     * @return objeto complejo
+     */
     public Empleado crearEmpleado() {
 
         return new Empleado(nombre, apellido1, apellido2, dia, mes, anho, altura, pie, diamCabeza, sueldo, dni, cargo, formacion);
